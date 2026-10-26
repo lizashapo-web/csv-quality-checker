@@ -1,0 +1,4 @@
+id,name,email,age,signup_date,city
+1,Olena Kovalenko,olena@example.com,28,2024-01-15,Kyiv
+2,Andrii Melnyk,andrii@example.com,34,2024-02-03,Lviv
+3,Maria Shevchenko,maria@example.com,29,2024-02-10,Odesa

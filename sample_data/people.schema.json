@@ -1,0 +1,10 @@
+{
+  "columns": {
+    "id": {"type": "int"},
+    "name": {"type": "text"},
+    "email": {"type": "email"},
+    "age": {"type": "int", "min": 0, "max": 120},
+    "signup_date": {"type": "date"},
+    "city": {"type": "text"}
+  }
+}

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-quality-checker"
+version = "1.0.0"
+description = "Command-line tool that checks the quality of CSV files and writes a JSON report."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []  # standard library only
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10"]
+
+[project.scripts]
+csv-quality-checker = "csv_checker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["csv_checker*"]
+
+[tool.setuptools.package-data]
+csv_checker = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.mypy]
+files = ["csv_checker"]
+python_version = "3.10"
+strict = true

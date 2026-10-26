@@ -1,0 +1,130 @@
+{
+  "tool_version": "1.0.0",
+  "file": "sample_data/people.csv",
+  "generated_at": "2026-10-23T19:21:08",
+  "schema": {
+    "source": "file",
+    "path": "sample_data/people.schema.json"
+  },
+  "summary": {
+    "rows": 10,
+    "columns": 6,
+    "issues_total": 8,
+    "rows_with_issues": 7,
+    "clean_rows_percent": 30.0,
+    "issues_by_type": {
+      "duplicate_row": 1,
+      "invalid_type": 3,
+      "missing_value": 3,
+      "out_of_range": 1
+    }
+  },
+  "columns": {
+    "id": {
+      "expected_type": "int",
+      "missing": 0,
+      "unique": 9,
+      "min": 1,
+      "max": 9,
+      "mean": 4.7,
+      "issues": 0
+    },
+    "name": {
+      "expected_type": "text",
+      "missing": 1,
+      "unique": 8,
+      "most_common": {
+        "value": "Andrii Melnyk",
+        "count": 2
+      },
+      "issues": 1
+    },
+    "email": {
+      "expected_type": "email",
+      "missing": 1,
+      "unique": 8,
+      "most_common": {
+        "value": "andrii@example.com",
+        "count": 2
+      },
+      "issues": 1
+    },
+    "age": {
+      "expected_type": "int",
+      "missing": 0,
+      "unique": 9,
+      "min": -5,
+      "max": 52,
+      "mean": 29.89,
+      "issues": 2
+    },
+    "signup_date": {
+      "expected_type": "date",
+      "missing": 0,
+      "unique": 9,
+      "earliest": "2024-01-15",
+      "latest": "2024-06-01",
+      "issues": 2
+    },
+    "city": {
+      "expected_type": "text",
+      "missing": 1,
+      "unique": 7,
+      "most_common": {
+        "value": "Kyiv",
+        "count": 2
+      },
+      "issues": 1
+    }
+  },
+  "issues": [
+    {
+      "type": "missing_value",
+      "line": 4,
+      "column": "email",
+      "message": "Missing value in column 'email'"
+    },
+    {
+      "type": "invalid_type",
+      "line": 5,
+      "column": "age",
+      "message": "age: 'abc' is not an integer"
+    },
+    {
+      "type": "invalid_type",
+      "line": 6,
+      "column": "signup_date",
+      "message": "signup_date: '2024-13-45' is not a valid date (expected YYYY-MM-DD)"
+    },
+    {
+      "type": "duplicate_row",
+      "line": 7,
+      "column": null,
+      "message": "Duplicate of line 3"
+    },
+    {
+      "type": "out_of_range",
+      "line": 8,
+      "column": "age",
+      "message": "age: -5 is below the minimum 0"
+    },
+    {
+      "type": "missing_value",
+      "line": 8,
+      "column": "city",
+      "message": "Missing value in column 'city'"
+    },
+    {
+      "type": "invalid_type",
+      "line": 9,
+      "column": "signup_date",
+      "message": "signup_date: 'not a date' is not a valid date (expected YYYY-MM-DD)"
+    },
+    {
+      "type": "missing_value",
+      "line": 10,
+      "column": "name",
+      "message": "Missing value in column 'name'"
+    }
+  ]
+}
