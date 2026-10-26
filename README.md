@@ -31,7 +31,7 @@ Numbers must be real numbers: Python-only spellings such as `1_000` or `nan` are
 Requires Python 3.10 or newer.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/lizashapo-web/csv-quality-checker
 cd csv-quality-checker
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
@@ -219,4 +219,4 @@ The same four commands run in GitHub Actions on Python 3.10 to 3.13
 
 ## License
 
-MIT
+YShapovalova
